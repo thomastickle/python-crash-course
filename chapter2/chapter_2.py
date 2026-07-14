@@ -39,3 +39,13 @@ print(f"Strip: {famous_person_name.strip()}.")
 # 2-8
 filename = "python_notes.txt"
 print(filename.removesuffix(".txt"))
+
+# 2-9
+print(5 + 3)
+print(10 - 2)
+print(2 * 4)
+print(24 / 3)
+
+# 2-10
+favorite_number = 21
+print(f"My favorite number is {favorite_number}.")

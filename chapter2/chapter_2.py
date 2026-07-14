@@ -1,4 +1,4 @@
-### These are the try it yourself exercises for chapter 1
+### These are the try it yourself exercises for chapter 2
 
 # 2-1
 message = "Doing a crash course in Python."

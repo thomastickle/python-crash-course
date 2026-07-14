@@ -1,0 +1,16 @@
+# JetBrains IDEs (IntelliJ IDEA, PyCharm, etc.)
+.idea/
+*.iml
+
+# Visual Studio Code
+.vscode/
+
+# Vim / Neovim
+.nvimlog
+*.swp
+*.swo
+*~
+
+# Editor and OS metadata
+.DS_Store
+Thumbs.db

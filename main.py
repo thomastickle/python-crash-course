@@ -44,7 +44,12 @@ def main():
                 parser.error(
                     f"exercise {args.chapter}-{args.exercise} does not exist"
                 )
-            run_script(exercise)
+            module = f"{chapter_directory.name}.{exercise.stem}"
+            subprocess.run(
+                [sys.executable, "-m", module],
+                check=True,
+                cwd=project_directory,
+            )
             return
 
         run_script(chapter_runner)

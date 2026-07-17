@@ -1,4 +1,4 @@
-from exercise_output import print_exercise_header
+from util.exercise_output import print_exercise_header
 
 print_exercise_header("4-11 My Pizzas, Your Pizzas")
 my_pizzas = ["pepperoni", "italian sausage", "canadian bacon"]

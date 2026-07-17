@@ -1,4 +1,4 @@
-from exercise_output import print_exercise_header
+from util.exercise_output import print_exercise_header
 
 
 print_exercise_header("2-11")
@@ -6,4 +6,3 @@ print_exercise_header("2-11")
 # we will just comment here.
 # Thomas Tickle
 # This does some exploration with strings and string operations along with some with math.
-

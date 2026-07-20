@@ -30,6 +30,7 @@ Pass a chapter number to the top-level runner:
 python3 main.py 2
 python3 main.py 3
 python3 main.py 4
+python3 main.py 5
 ```
 
 ## Run one exercise
@@ -40,6 +41,13 @@ Pass both the chapter and exercise numbers to the top-level runner. For example:
 python3 main.py 2 1
 python3 main.py 3 7
 python3 main.py 4 10
+python3 main.py 5 1
+```
+
+Exercises can also be run as Python modules from the repository root:
+
+```bash
+python3 -m chapter5.exercise_5_1
 ```
 
 Use `python3 main.py --help` to see the available arguments.

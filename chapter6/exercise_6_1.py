@@ -4,10 +4,10 @@ from util.exercise_output import print_exercise_header
 print_exercise_header("6-1 Person")
 
 person = {
-    "first_name": "Joe",
-    "last_name": "Huang",
-    "age": 46,
-    "city": "Lawrenceville",
+    "first_name": "Taylor",
+    "last_name": "Swift",
+    "age": 36,
+    "city": "New York",
 }
 
 print(f"First name: {person['first_name']}")

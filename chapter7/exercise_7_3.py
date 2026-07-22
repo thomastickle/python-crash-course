@@ -2,7 +2,7 @@ from util.exercise_output import print_exercise_header
 
 
 print_exercise_header("7-3 Multiples of 10")
-candidate = input("Please enter a number. ")
+candidate = input("Please enter a number: ")
 candidate = int(candidate)
 if candidate % 10 == 0:
     print(f"{candidate} is a multiple of 10: ")

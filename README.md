@@ -31,6 +31,8 @@ python3 main.py 2
 python3 main.py 3
 python3 main.py 4
 python3 main.py 5
+python3 main.py 6
+python3 main.py 7
 ```
 
 ## Run one exercise
@@ -42,6 +44,9 @@ python3 main.py 2 1
 python3 main.py 3 7
 python3 main.py 4 10
 python3 main.py 5 1
+python3 main.py 7 6a
+python3 main.py 7 6b
+python3 main.py 7 6c
 ```
 
 Exercises can also be run as Python modules from the repository root:

@@ -16,9 +16,8 @@ def parse_args():
     )
     parser.add_argument(
         "exercise",
-        type=int,
         nargs="?",
-        help="exercise number to run within the selected chapter",
+        help="exercise identifier to run within the selected chapter (for example, 1 or 6a)",
     )
     return parser, parser.parse_args()
 

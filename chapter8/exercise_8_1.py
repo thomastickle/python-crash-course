@@ -5,7 +5,7 @@ print_exercise_header("8-1 Message")
 
 
 def display_message():
-    print("I am learning about functions")
+    print("I am learning about functions.")
 
 
 display_message()

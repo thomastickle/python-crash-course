@@ -30,6 +30,6 @@ while True:
         break
 
     result = first_number + second_number
-    print("fSum is {result}.")
+    print(f"Sum is {result}.")
 
 print("Goodbye!")

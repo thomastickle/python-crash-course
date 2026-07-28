@@ -8,5 +8,5 @@ print_exercise_header("10-1 Learning Python")
 BASE_DIR = Path(__file__).resolve().parent
 INPUT_FILE = BASE_DIR / "input" / "learning_python.txt"
 
-text = INPUT_FILE.read_text().rstrip()
+text = INPUT_FILE.read_text(encoding="utf-8").rstrip()
 print(text)

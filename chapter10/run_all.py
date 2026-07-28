@@ -4,7 +4,7 @@ import subprocess
 import sys
 
 
-def exercise_sort_key(path):
+def exercise_sort_key(path: Path) -> tuple[int, str]:
     exercise = path.stem.rsplit("_", 1)[1]
     match = re.fullmatch(r"(\d+)([a-z]*)", exercise)
     if match is None:
@@ -12,7 +12,7 @@ def exercise_sort_key(path):
     return int(match.group(1)), match.group(2)
 
 
-def main():
+def main() -> None:
     chapter_directory = Path(__file__).parent
     project_directory = chapter_directory.parent
     for exercise in sorted(

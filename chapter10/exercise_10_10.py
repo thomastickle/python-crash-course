@@ -40,16 +40,16 @@ def download_moby_dick() -> Path | None:
     return destination
 
 
-def countWords(file_path: Path) -> int:
-    input = file_path.read_text().casefold()
-    all_words = re.findall(r"[a-z]+", input)
+def count_words(file_path: Path) -> int:
+    contents = file_path.read_text().casefold()
+    all_words = re.findall(r"[a-z]+", contents)
     word_counts = Counter(all_words)
     return word_counts["the"]
 
 
 print_exercise_header("10-10")
 
-file = download_moby_dick()
-if file is not None:
-    count = countWords(file)
+downloaded_file = download_moby_dick()
+if downloaded_file is not None:
+    count = count_words(downloaded_file)
     print(f"Count of 'the' was {count}")

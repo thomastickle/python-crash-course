@@ -8,7 +8,7 @@ OUTPUT_DIR = BASE_DIR / "output"
 FAVORITE_NUMBER_FILE = OUTPUT_DIR / "exercise_10_11.json"
 
 
-def write_favorite_as_json(number: int):
+def write_favorite_as_json(number: int) -> None:
     output_file = FAVORITE_NUMBER_FILE
     output = json.dumps(number)
     try:

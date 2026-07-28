@@ -5,7 +5,8 @@ from util.exercise_output import print_exercise_header
 
 
 BASE_DIR = Path(__file__).resolve().parent
-USER_FILE = Path(f"{BASE_DIR}/output/exercise_10_14.json")
+OUTPUT_DIR = BASE_DIR / "output"
+USER_FILE = OUTPUT_DIR / "exercise_10_14.json"
 
 
 class User:
@@ -27,9 +28,10 @@ def get_stored_username() -> User | None:
 def save_user(path: Path, user: User):
     try:
         json_rep = json.dumps(user.__dict__, indent=4)
+        path.parent.mkdir(parents=True, exist_ok=True)
         path.write_text(json_rep)
     except FileNotFoundError:
-        print(f"Unable to write to file {USER_FILE}")
+        print(f"Unable to write to file {path}")
         quit()
 
 

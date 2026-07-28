@@ -3,11 +3,14 @@ from pathlib import Path
 from util.exercise_output import print_exercise_header
 
 
+BASE_DIR = Path(__file__).resolve().parent
+INPUT_DIR = BASE_DIR / "input"
+
+
 def getLinesFromFile(filename: str):
-    input_directory = Path(__file__).resolve().parent
-    file = Path(f"{input_directory}/input/{filename}")
+    input_file = INPUT_DIR / filename
     try:
-        lines = file.read_text().rstrip().split("\n")
+        lines = input_file.read_text().rstrip().split("\n")
     except FileNotFoundError:
         print(f"Unable to find {filename}")
         return None

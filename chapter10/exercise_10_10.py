@@ -10,13 +10,15 @@ from urllib.request import Request, urlopen
 
 MOBY_DICK_URL = "https://www.gutenberg.org/cache/epub/2701/pg2701.txt"
 BASE_DIR = Path(__file__).resolve().parent
-SAVE_FILE = f"{BASE_DIR}/output/exercise_10_10.txt"
+OUTPUT_DIR = BASE_DIR / "output"
+SAVE_FILE = OUTPUT_DIR / "exercise_10_10.txt"
 
 
 def download_moby_dick() -> Path | None:
     """Download Moby-Dick unless it already exists."""
 
-    destination = Path(SAVE_FILE)
+    destination = SAVE_FILE
+    OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
     if destination.exists():
         print(f"{destination.name} already exists. Skipping download.")

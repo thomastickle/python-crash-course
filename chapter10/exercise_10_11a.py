@@ -4,13 +4,15 @@ from pathlib import Path
 from util.exercise_output import print_exercise_header
 
 BASE_DIR = Path(__file__).resolve().parent
-FILE_NAME = f"{BASE_DIR}/output/exercise_10_11.json"
+OUTPUT_DIR = BASE_DIR / "output"
+FAVORITE_NUMBER_FILE = OUTPUT_DIR / "exercise_10_11.json"
 
 
 def write_favorite_as_json(number: int):
-    output_file = Path(FILE_NAME)
+    output_file = FAVORITE_NUMBER_FILE
     output = json.dumps(number)
     try:
+        OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
         output_file.write_text(output)
     except FileNotFoundError:
         print(f"Unable to write to file: {output_file}")

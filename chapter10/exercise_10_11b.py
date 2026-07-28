@@ -5,11 +5,12 @@ from util.exercise_output import print_exercise_header
 
 
 BASE_DIR = Path(__file__).resolve().parent
-FILE_NAME = f"{BASE_DIR}/output/exercise_10_11.json"
+OUTPUT_DIR = BASE_DIR / "output"
+FAVORITE_NUMBER_FILE = OUTPUT_DIR / "exercise_10_11.json"
 
 
 def read_favorite_number() -> int | None:
-    file = Path(FILE_NAME)
+    file = FAVORITE_NUMBER_FILE
     try:
         input = file.read_text()
         value = json.loads(input)

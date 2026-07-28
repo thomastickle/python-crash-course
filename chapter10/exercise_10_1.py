@@ -5,8 +5,8 @@ from util.exercise_output import print_exercise_header
 
 print_exercise_header("10-1 Learning Python")
 
-directory = Path(__file__).resolve().parent
+BASE_DIR = Path(__file__).resolve().parent
+INPUT_FILE = BASE_DIR / "input" / "learning_python.txt"
 
-path = Path(f"{directory}/input/learning_python.txt")
-text = path.read_text().rstrip()
+text = INPUT_FILE.read_text().rstrip()
 print(text)

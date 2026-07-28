@@ -3,6 +3,11 @@ from pathlib import Path
 from util.exercise_output import print_exercise_header
 
 
+BASE_DIR = Path(__file__).resolve().parent
+OUTPUT_DIR = BASE_DIR / "output"
+OUTPUT_FILE = OUTPUT_DIR / "guest_book.txt"
+
+
 print_exercise_header("10-5 Guest Book")
 print("Please sign the guest book.")
 
@@ -16,6 +21,5 @@ while True:
 
 output = "\n".join(guest_book) + "\n"
 
-output_directory = Path(__file__).resolve().parent
-output_file = Path(f"{output_directory}/output/guest_book.txt")
-output_file.write_text(output)
+OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+OUTPUT_FILE.write_text(output)

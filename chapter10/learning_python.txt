@@ -1,3 +1,0 @@
-Python can loop over values of a list or dictionary.
-Python can read files in as a list of lines.
-Python can modify strings to compare through using methods such as upper(), lower(), or title().

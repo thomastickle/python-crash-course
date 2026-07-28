@@ -4,7 +4,7 @@ from pathlib import Path
 import json
 
 BASE_DIR = Path(__file__).resolve().parent
-USER_FILE = Path(f"{BASE_DIR}/output/exercise_10_30.json")
+USER_FILE = Path(f"{BASE_DIR}/output/exercise_10_13.json")
 
 
 class User:
